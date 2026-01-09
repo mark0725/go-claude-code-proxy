@@ -31,7 +31,7 @@
 | `ANTHROPIC_API_KEY` | 否 | - | Anthropic API 密钥 |
 | `OPENAI_BASE_URL` | 否 | `https://api.openai.com/v1` | OpenAI API 基础 URL |
 | `GOOGLE_BASE_URL` | 否 | `https://generativelanguage.googleapis.com/v1beta` | Google API 基础 URL |
-| `ANTHROPIC_BASE_URL` | 否 | `https://api.anthropic.com` | Anthropic API 基础 URL |
+| `ANTHROPIC_BASE_URL` | 否 | `https://api.anthropic.com/v1` | Anthropic API 基础 URL |
 | `PROXY_API_KEY` | 否 | - | 代理服务的 API Key (用于验证客户端请求) |
 | `PROXY_URL` | 否 | - | HTTP 代理 URL |
 | `PORT` | 否 | `8082` | 服务监听端口 |

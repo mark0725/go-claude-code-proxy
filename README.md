@@ -31,7 +31,7 @@ An Anthropic API proxy server written in Go that supports forwarding Anthropic A
 | `ANTHROPIC_API_KEY` | No | - | Anthropic API key |
 | `OPENAI_BASE_URL` | No | `https://api.openai.com/v1` | OpenAI API base URL |
 | `GOOGLE_BASE_URL` | No | `https://generativelanguage.googleapis.com/v1beta` | Google API base URL |
-| `ANTHROPIC_BASE_URL` | No | `https://api.anthropic.com` | Anthropic API base URL |
+| `ANTHROPIC_BASE_URL` | No | `https://api.anthropic.com/v1` | Anthropic API base URL |
 | `PROXY_API_KEY` | No | - | Proxy service API key (for client request validation) |
 | `PROXY_URL` | No | - | HTTP proxy URL |
 | `PORT` | No | `8082` | Service listening port |
@@ -53,7 +53,7 @@ PROXY_API_KEY=your_proxy_key
 # Optional: Custom API base URLs
 OPENAI_BASE_URL=https://api.openai.com/v1
 GOOGLE_BASE_URL=https://generativelanguage.googleapis.com/v1beta
-ANTHROPIC_BASE_URL=https://api.anthropic.com
+ANTHROPIC_BASE_URL=https://api.anthropic.com/v1
 
 # Optional: HTTP proxy
 PROXY_URL=http://127.0.0.1:7890
