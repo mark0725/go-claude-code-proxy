@@ -254,7 +254,7 @@ type ErrorResponse struct {
 // ============================================================================
 
 func initLogger() {
-	level := slog.LevelDebug // 默认 debug
+	level := slog.LevelInfo // 默认 debug
 
 	switch strings.ToLower(LOG_LEVEL) {
 	case "debug":

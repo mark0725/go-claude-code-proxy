@@ -164,7 +164,7 @@ docker run -d -p 8082:8082 \
     -e OPENAI_API_KEY=your_key \
     -e ANTHROPIC_API_KEY=your_key \
     -e GOOGLE_API_KEY=your_key \
-    go-claude-code-proxy
+    ghcr.io/mark0725/go-claude-code-proxy:latest
 ```
 
 ## License
