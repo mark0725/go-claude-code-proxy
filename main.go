@@ -287,7 +287,7 @@ func init() {
 	GOOGLE_API_KEY = os.Getenv("GOOGLE_API_KEY")
 	OPENAI_BASE_URL = getEnvDefault("OPENAI_BASE_URL", "https://api.openai.com/v1")
 	GOOGLE_BASE_URL = getEnvDefault("GOOGLE_BASE_URL", "https://generativelanguage.googleapis.com/v1beta")
-	ANTHROPIC_BASE_URL = getEnvDefault("ANTHROPIC_BASE_URL", "https://api.anthropic.com")
+	ANTHROPIC_BASE_URL = getEnvDefault("ANTHROPIC_BASE_URL", "https://api.anthropic.com/v1")
 	PROXY_URL = os.Getenv("PROXY_URL")
 
 	// 初始化 logger
