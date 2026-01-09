@@ -53,7 +53,7 @@ PROXY_API_KEY=your_proxy_key
 # 可选: 自定义 API 基础 URL
 OPENAI_BASE_URL=https://api.openai.com/v1
 GOOGLE_BASE_URL=https://generativelanguage.googleapis.com/v1beta
-ANTHROPIC_BASE_URL=https://api.anthropic.com
+ANTHROPIC_BASE_URL=https://api.anthropic.com/v1
 
 # 可选: HTTP 代理
 PROXY_URL=http://127.0.0.1:7890
