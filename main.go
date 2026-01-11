@@ -1009,6 +1009,7 @@ func callOpenAIStream(ctx context.Context, req *OpenAIRequest, provider Provider
 			return
 		}
 
+		slog.Info("calling openai api stream", slog.String("url", baseURL+"/chat/completions"))
 		httpReq, err := http.NewRequestWithContext(ctx, "POST", baseURL+"/chat/completions", bytes.NewReader(jsonBody))
 		if err != nil {
 			errChan <- fmt.Errorf("failed to create request: %w", err)
