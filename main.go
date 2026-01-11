@@ -254,7 +254,7 @@ type ErrorResponse struct {
 // ============================================================================
 
 func initLogger() {
-	level := slog.LevelInfo // 默认 debug
+	level := slog.LevelInfo // 默认 info
 
 	switch strings.ToLower(LOG_LEVEL) {
 	case "debug":
@@ -275,6 +275,8 @@ func initLogger() {
 	slog.SetDefault(slog.New(handler))
 }
 
+var httpClient *http.Client
+
 func init() {
 	// Load .env file
 	godotenv.Load()
@@ -290,6 +292,10 @@ func init() {
 	ANTHROPIC_BASE_URL = getEnvDefault("ANTHROPIC_BASE_URL", "https://api.anthropic.com/v1")
 	PROXY_URL = os.Getenv("PROXY_URL")
 
+	httpClient = &http.Client{
+		Transport: createTransport(PROXY_URL),
+		Timeout:   5 * time.Minute,
+	}
 	// 初始化 logger
 	initLogger()
 }
@@ -720,11 +726,6 @@ func createTransport(proxyUrl string) *http.Transport {
 	}
 
 	return transport
-}
-
-var httpClient = &http.Client{
-	Transport: createTransport(PROXY_URL),
-	Timeout:   5 * time.Minute,
 }
 
 func getAPIKeyAndBaseURL(provider Provider) (string, string) {
