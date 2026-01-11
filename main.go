@@ -279,7 +279,7 @@ func init() {
 	// Load .env file
 	godotenv.Load()
 
-	LOG_LEVEL = getEnvDefault("LOG_LEVEL", "debug")
+	LOG_LEVEL = getEnvDefault("LOG_LEVEL", "info")
 	PROXY_API_KEY = os.Getenv("PROXY_API_KEY")
 
 	ANTHROPIC_API_KEY = os.Getenv("ANTHROPIC_API_KEY")
